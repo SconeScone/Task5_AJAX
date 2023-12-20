@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="css/lightTheme.css" rel="stylesheet" id="themeLink">
+    <title>My posts app</title>
+</head>
+<body>
+    <header>
+        <div class="header__grid">
+            <div></div>
+            <h1>My Posts</h1>
+            <button id="changeTheme">Темная тема</button>
+        </div>
+    </header>
+    <div class="body__flex-column" id="body-posts">
+        <!-- <div class="post-block" id="post-block-Здесь id блока поста">
+            <div class="post__name" id="Здесь id пользователя">Имя пользователя</div>
+            <div class="post__title">Заголовок</div>
+            <div class="post__text">Текст</div>
+            <div class="post__flex-row">
+                <button class="edit-button">Редактировать</button>
+                <button class="delete-button">✖</button>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="add-button" id="body-add-button">Добавить пост</div>
+
+    <!-- Форма добавления поста -->
+    <div class="modal-window" id="modal-add-window">
+        <div class="modal-window__flex">
+            <div class="modal-block">
+                <div id="loader-1"class="loader hide-loader">
+                    <div class="loader_flex-row">
+                        <img src="images/refresh.svg" alt="Loader" class="rotate circle filter-loader">
+                    </div>
+                </div>
+                <h1>Создание поста</h1>
+                <form name="addForm">
+                    <input type="number" min="1" max="10" name="userId" placeholder="ID пользователя" required>
+                    <input type="text" name="title" placeholder="Заголовок" required>
+                    <textarea name="text" placeholder="Текст поста" required></textarea>
+                    <button type="submit" id="modal-add-button">Запостить</button>
+                </form>
+                <div class="modal__close-button" id="modal-add-close-button">✖</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Форма редактирования поста -->
+    <div class="modal-window" id="modal-edit-window">
+        <div class="modal-window__flex">
+            <div class="modal-block">
+                <div id="loader-2"class="loader hide-loader">
+                    <div class="loader_flex-row">
+                        <img src="images/refresh.svg" alt="Loader" class="rotate circle filter-loader">
+                    </div>
+                </div>
+                <h1>Редактирование поста</h1>
+                <form name="editForm">
+                    <input type="number" min="1" max="10" name="userId" placeholder="ID пользователя" required>
+                    <input type="text" name="title" placeholder="Заголовок" required>
+                    <textarea name="text" placeholder="Текст поста" required></textarea>
+                    <button type="submit" id="modal-edit-button">Сохранить изменения</button>
+                    <input type="hidden" name="id"/>
+                </form>
+                <div class="modal__close-button" id="modal-edit-close-button">✖</div>
+            </div>
+        </div>
+    </div>
+
+    <script defer type="module" src="js/index.js"></script>
+    <script src="js/changeTheme.js"></script>
+
+</body>
+</html>

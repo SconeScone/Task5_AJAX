@@ -1,0 +1,284 @@
+:root
+{
+    --light-grey-color:rgb(230, 230, 230);
+    --light-blue-color-hover:rgba(181, 244, 247);
+    --light-blue-color:rgba(149, 228, 232, 1);
+    --dark-blue-color:rgba(12, 32, 48, 1);
+    --blue-color:rgba(18, 51, 76, 1);
+    --blue-color-lighter:rgb(27, 73, 108);
+    --blue-color-hover:rgb(27, 74, 110, 1);
+    --shadow-color:rgba(34, 60, 80, 0.4);
+    --dark-shadow-color:rgba(11, 19, 26, 0.4);
+    --size:40px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1
+{
+    font-family: 'Unbounded', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+button#changeTheme
+{
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 15px;
+    border:none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.header__grid
+{
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.post-block
+{
+    height: auto;
+    width: 60%;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px -5px var(--shadow-color);
+}
+
+.body__flex-column
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.title__flex-column
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post__flex-row
+{
+    display: flex;
+    align-items: center;
+}
+
+
+.add-button
+{
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    width: fit-content;
+    margin: 20px auto 50px auto;
+    padding:15px 20px;
+    border-radius: 20px;
+    transition: .3s all ease;
+}
+
+.add-button:hover
+{
+    transition: .3s all ease;
+}
+
+button.edit-button
+{
+    cursor: pointer;
+    height: var(--size);
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    transition: .3s all ease;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+button.edit-button:hover
+{
+    transition: .3s all ease;
+}
+
+button.delete-button
+{
+    cursor: pointer;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 15px;
+    transition: .3s all ease;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+button.delete-button:hover
+{
+    transition: .3s all ease;
+}
+
+.post__text
+{
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.post__title
+{
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.post__name
+{
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.modal-window
+{
+   width: 100%;
+   height: 100%; 
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 2;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity .4s, visibility .4s;
+}
+
+.modal-window.open
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-window__flex
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-block
+{
+    min-height: 500px;
+    width: 650px;
+    border-radius: 30px;
+    padding: 35px 35px;
+    position: relative;
+    transform: scale(0);
+    transition: transform .8s;
+}
+
+.modal-window.open .modal-block
+{
+    transform: scale(1);
+}
+
+.modal-block input, .modal-block textarea
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding:20px 20px;
+    margin: 30px auto 20px auto;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.15) inset;
+}
+
+.modal-block input:focus
+{
+    outline: none;
+}
+
+.modal-block textarea
+{
+    resize: none;
+    height: 150px;
+}
+
+.modal-block textarea:focus
+{
+    outline: none;
+}
+
+.modal-block button
+{
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    padding:15px 20px;
+    border-radius: 20px;
+    transition: .3s all ease;
+}
+
+.modal-block button:hover
+{
+    transition: .3s all ease;
+}
+
+.modal__close-button
+{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    transition: .3s all ease;
+}
+
+.modal__close-button:hover
+{
+    transition: .3s all ease;
+}

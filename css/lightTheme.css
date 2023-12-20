@@ -1,0 +1,101 @@
+body
+{
+    background-color: var(--light-blue-color);
+    color:var(--blue-color);
+}
+
+header
+{
+    background-color: var(--blue-color);
+}
+
+h1
+{
+    color: white;
+}
+
+button#changeTheme
+{
+    background-color: white;
+    color:var(--blue-color);
+    box-shadow: 0px 10px 20px -5px var(--shadow-color);
+}
+
+.post-block
+{
+    background-color: white;
+}
+
+.add-button
+{
+    color: white;
+    background-color: var(--blue-color);
+    box-shadow: 0px 10px 20px -5px var(--shadow-color);
+}
+
+.add-button:hover
+{
+    background-color: var(--blue-color-hover);
+}
+
+button.edit-button
+{
+    color: white;
+    background-color: var(--blue-color);
+    box-shadow: 0px 10px 20px -5px var(--shadow-color);
+}
+
+button.edit-button:hover
+{
+    background-color: var(--blue-color-hover);
+}
+
+button.delete-button
+{
+    color: white;
+    background-color: var(--blue-color);
+    box-shadow: 0px 10px 20px -5px var(--shadow-color);
+}
+
+button.delete-button:hover
+{
+    background-color: var(--blue-color-hover);
+}
+
+.modal-window
+{
+    background-color: rgba(18, 51, 76, 0.7);
+}
+
+.modal-block h1
+{
+    color:var(--blue-color);
+}
+
+.modal-block
+{
+    background-color: var(--light-blue-color);
+}
+
+.modal-block input, .modal-block textarea
+{
+    color: var(--blue-color);
+    background-color: white;
+}
+
+.modal-block button
+{
+    color: white;
+    background-color: var(--blue-color);
+    box-shadow: 0px 10px 20px -5px var(--shadow-color);
+}
+
+.modal-block button:hover
+{
+    background-color: var(--blue-color-hover);
+}
+
+.modal__close-button:hover
+{
+    color: var(--blue-color-hover);
+}

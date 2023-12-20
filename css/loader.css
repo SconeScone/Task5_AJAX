@@ -1,0 +1,55 @@
+.loader
+{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    z-index:4;
+    /* opacity: 1;
+    transition: opacity .2s, visibility .2s; */
+}
+
+.hide-loader
+{
+    display: none;
+    /* opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    visibility: hidden; */
+}
+
+.filter-loader
+{
+    filter: invert(15%) sepia(8%) saturate(5419%) hue-rotate(168deg) brightness(99%) contrast(92%);
+}
+
+.loader_flex-row
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.circle
+{
+    height: 100px;
+    width: 100px;
+}
+
+.rotate
+{
+    animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
